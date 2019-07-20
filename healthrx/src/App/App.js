@@ -7,7 +7,8 @@ import {  BrowserRouter as Router,
 import Navigation from '../Navigation/Navigation';
 import LandingPage from '../Landing/Landing';
 import SignUpPage from '../SignUp/Signup';
-import SignInPage from '../SignIn/SigIn';
+import LoginPatient from '../Login/PatientLogin';
+import LoginDoctor from '../Login/DoctorLogin';
 import PasswordForgetPage from '../PasswordForget/PasswordForget';
 import HomePage from '../Home/Home';
 import AccountPage from '../Account/Account';
@@ -29,7 +30,8 @@ function App() {
 
       <Route exact path={ROUTES.LANDING} component={LandingPage} />
       <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
-      <Route path={ROUTES.SIGN_IN} component={SignInPage} />
+      <Route path={ROUTES.LOGIN} component={LoginPatient} />
+      <Route path={ROUTES.LOGIN} component={LoginDoctor}/>
       <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage} />
       <Route path={ROUTES.HOME} component={HomePage} />
       <Route path={ROUTES.ACCOUNT} component={AccountPage} />
