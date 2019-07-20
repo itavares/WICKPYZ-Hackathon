@@ -31,7 +31,7 @@ class PatientNavBar extends Component {
                     <Navbar.Collapse id="responsive-navbar-nav">
 
                         <Nav className="mr-auto">
-                            {/* <Nav.Link href="#features">Patient</Nav.Link> */}
+                            <Nav.Link href="#features">Home</Nav.Link>
                             <Nav.Link href="#pricing">
                                 {this.state.navMsg}
                             </Nav.Link>
