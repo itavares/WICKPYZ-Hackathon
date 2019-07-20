@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3B6A3132B904107A1287B41 /* libPods-HealthRxApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F047F62EB68826574942A24B /* libPods-HealthRxApp.a */; };
 		D3D6340422E36C3E0039C2BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6340322E36C3E0039C2BB /* AppDelegate.swift */; };
 		D3D6340622E36C3E0039C2BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6340522E36C3E0039C2BB /* ViewController.swift */; };
 		D3D6340922E36C3E0039C2BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3D6340722E36C3E0039C2BB /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		297C3F50A8FA88BCFC179079 /* Pods-HealthRxApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthRxApp.debug.xcconfig"; path = "Target Support Files/Pods-HealthRxApp/Pods-HealthRxApp.debug.xcconfig"; sourceTree = "<group>"; };
+		C69E847E0D5DD2197731D6D1 /* Pods-HealthRxApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthRxApp.release.xcconfig"; path = "Target Support Files/Pods-HealthRxApp/Pods-HealthRxApp.release.xcconfig"; sourceTree = "<group>"; };
 		D3D6340022E36C3E0039C2BB /* HealthRxApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthRxApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3D6340322E36C3E0039C2BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3D6340522E36C3E0039C2BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		D3D6340D22E36C3E0039C2BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3D6341022E36C3E0039C2BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3D6341222E36C3E0039C2BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F047F62EB68826574942A24B /* libPods-HealthRxApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HealthRxApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3B6A3132B904107A1287B41 /* libPods-HealthRxApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7930CEA3EB2B970C3CFB9D3E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				297C3F50A8FA88BCFC179079 /* Pods-HealthRxApp.debug.xcconfig */,
+				C69E847E0D5DD2197731D6D1 /* Pods-HealthRxApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8BAA3B25C79BD8E834E0B16B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F047F62EB68826574942A24B /* libPods-HealthRxApp.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D3D633F722E36C3E0039C2BB = {
 			isa = PBXGroup;
 			children = (
 				D3D6340222E36C3E0039C2BB /* HealthRxApp */,
 				D3D6340122E36C3E0039C2BB /* Products */,
+				7930CEA3EB2B970C3CFB9D3E /* Pods */,
+				8BAA3B25C79BD8E834E0B16B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +99,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3D6341522E36C3E0039C2BB /* Build configuration list for PBXNativeTarget "HealthRxApp" */;
 			buildPhases = (
+				6920D5BB9D8362783A1D19C5 /* [CP] Check Pods Manifest.lock */,
 				D3D633FC22E36C3E0039C2BB /* Sources */,
 				D3D633FD22E36C3E0039C2BB /* Frameworks */,
 				D3D633FE22E36C3E0039C2BB /* Resources */,
@@ -132,6 +158,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6920D5BB9D8362783A1D19C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HealthRxApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D3D633FC22E36C3E0039C2BB /* Sources */ = {
@@ -284,6 +335,7 @@
 		};
 		D3D6341622E36C3E0039C2BB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 297C3F50A8FA88BCFC179079 /* Pods-HealthRxApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -301,6 +353,7 @@
 		};
 		D3D6341722E36C3E0039C2BB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C69E847E0D5DD2197731D6D1 /* Pods-HealthRxApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
