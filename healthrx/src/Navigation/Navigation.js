@@ -10,7 +10,7 @@ function Navigation() {
     <div>
     <ul>
       <li>
-        <Link to={ROUTES.LOGIN}>Sign In</Link>
+        <Link to={ROUTES.LOGIN_DOCTOR}>Sign In</Link>
       </li>
       <li>
         <Link to={ROUTES.LANDING}>Landing</Link>
@@ -30,12 +30,5 @@ function Navigation() {
     
   );
 }
-// const App = () => (
-//   <div>
-//     <h1>App Navi Bar
-
-//     </h1>
-//   </div>
-// );
 
 export default Navigation;

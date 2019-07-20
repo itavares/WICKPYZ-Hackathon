@@ -5,8 +5,7 @@ import {  BrowserRouter as Router,
 } from 'react-router-dom';
 
 import Navigation from '../Navigation/Navigation';
-import LandingPage from '../Landing/Landing';
-// import SignUpPage from '../CreateAccount/CreateAccount';
+// import LandingPage from '../Landing/Landing';
 import LoginPatient from '../Login/PatientLogin';
 import LoginDoctor from '../Login/DoctorLogin';
 import PasswordForgetPage from '../PasswordForget/PasswordForget';
@@ -24,14 +23,14 @@ function App() {
       <header className="App-header">
       <Router>
       <div>
-      <Navigation />
+      {/* <Navigation /> */}
 
       <hr />
 
-      <Route exact path={ROUTES.LANDING} component={LandingPage} />
+      <Route exact path={ROUTES.LANDING} component={HomePage} />
 
-      <Route path={ROUTES.LOGIN} component={LoginPatient} />
-      <Route path={ROUTES.LOGIN} component={LoginDoctor}/>
+      <Route path={ROUTES.LOGIN_PATIENT} component={LoginPatient} />
+      <Route path={ROUTES.LOGIN_DOCTOR} component={LoginDoctor}/>
       <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage} />
       <Route path={ROUTES.HOME} component={HomePage} />
       <Route path={ROUTES.ACCOUNT} component={AccountPage} />

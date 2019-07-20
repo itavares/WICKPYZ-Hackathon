@@ -6,7 +6,7 @@ import {  withFirebase } from '../Firebase';
 import * as ROUTES from '../constants/routes'
 import { withRouter } from 'react-router-dom';
 
-// import {compose} from 'recompose';
+import {compose} from 'recompose';
 
 
 const CreatAccountPage = () =>(
@@ -125,11 +125,11 @@ class CreateAccount extends Component {
     }
 }
 
-const CreatAccountForm = withRouter(withFirebase(CreateAccount));
-// const CreatAccountForm = compose(
-//     withRouter,
-//     withFirebase,
-//   )(CreateAccount);
+// const CreatAccountForm = withRouter(withFirebase(CreateAccount));
+const CreatAccountForm = compose(
+    withRouter,
+    withFirebase,
+  )(CreateAccount);
 
 export default CreatAccountPage;
 
