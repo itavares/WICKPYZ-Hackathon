@@ -13,9 +13,9 @@ class Home extends Component {
                     <Col>
                         <div id="options" className="align-middle text-center">
                             <h1>Are you a: </h1>
-                            <button type="button" onclick="window.location.href='doctor.html'" class="btn btn-info">Doctor</button> 
+                            <button type="button" onclick="window.location.href='doctor.html'" class="btn btn-info home-page-btn">Doctor</button> 
                             <h3> or </h3>
-                            <button type="button" onclick="window.location.href='patient.html'" class="btn btn-info">Patient</button>
+                            <button type="button" onclick="window.location.href='patient.html'" class="btn btn-info home-page-btn">Patient</button>
                             <p>New? <a href="createaccount.html"> Create a account </a> </p>
                         </div>
                     </Col>

@@ -18,15 +18,14 @@ body{
   #options h1, h3{
     font-size: 50px
   }
-  .btn {
+  .home-page-btn {
     font-size: 50px; 
-  }
-  .btn-info{
     background-color: rgba(187, 187, 234,0.5); 
     color: black; 
     border:none; 
   }
-  .btn-info:hover{
+  
+  .home-page-btn:hover{
     background-color: rgba(162, 162, 194,0.5);
   }
   #options p{
