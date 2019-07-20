@@ -1,0 +1,11 @@
+${PODS_ROOT}/Target Support Files/Pods-HealthRxApp/Pods-HealthRxApp-resources.sh
+${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseEmailAuthUI.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle
+${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/FontAwesome.otf
+${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/foundation-icons.ttf
+${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/ionicons.ttf
+${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/Material-Design-Iconic-Font.ttf
+${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/octicons.ttf
+${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/zocial-regular-webfont.ttf
+${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle

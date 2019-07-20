@@ -1,0 +1,6 @@
+module Pods_HealthRxApp {
+  umbrella header "Pods-HealthRxApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
