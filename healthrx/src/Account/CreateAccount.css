@@ -1,0 +1,38 @@
+body{
+    background-color: #ccccfe;
+    color: black; 
+    font-size: 20px; 
+    text-align: center; 
+}
+#form{
+    position: relative; 
+    top: 70px; 
+    width: 80%;
+    display: inline-block; 
+}
+.col-sm-4{
+    margin-left: auto; 
+    margin-right: auto; 
+}
+.col-sm-3{
+    margin-left: auto; 
+    margin-right: auto; 
+}
+.col-sm-2{
+    margin-left: auto; 
+    margin-right: auto; 
+}
+#subbutton {
+    margin-left: auto; 
+    margin-right: auto; 
+}
+#inputEmail3{
+    margin-left: auto; 
+    margin-right: auto; 
+}
+.form-group{
+    display: inline; 
+}
+#passwordHelp{
+    display: none; 
+}

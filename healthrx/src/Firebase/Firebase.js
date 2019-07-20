@@ -1,4 +1,6 @@
 import app from'firebase/app';
+import FirebaseContext from './context';
+import Firebase from './firebase';
 
 
 const config = {
@@ -10,7 +12,6 @@ const config = {
   messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
 };
 
-
 class Firebase {
   constructor() {
     app.initializeApp(config);
@@ -18,3 +19,4 @@ class Firebase {
 }
 
 export default Firebase;
+

@@ -11,7 +11,7 @@ import LoginPatient from '../Login/PatientLogin';
 import LoginDoctor from '../Login/DoctorLogin';
 import PasswordForgetPage from '../PasswordForget/PasswordForget';
 import HomePage from '../Home/Home';
-import AccountPage from '../Account/Account';
+import AccountPage from '../Account/CreateAccount';
 import AdminPage from '../Admin/Admin';
 
 // Import routes
