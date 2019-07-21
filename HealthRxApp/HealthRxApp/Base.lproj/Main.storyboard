@@ -60,7 +60,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" image="login_button"/>
                                 <connections>
-                                    <action selector="login:" destination="gK6-IM-xRA" eventType="touchUpInside" id="LPe-B5-SJA"/>
+                                    <action selector="loginToHome:" destination="gK6-IM-xRA" eventType="touchUpInside" id="y64-tf-Kg9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfG-YK-gJA">
@@ -105,11 +105,12 @@
                     <connections>
                         <outlet property="emailTextField" destination="GeD-pJ-zW3" id="0Z1-uq-zPF"/>
                         <outlet property="passwordTextField" destination="nQd-fj-bhv" id="Qzu-b6-eJW"/>
+                        <segue destination="vGR-qt-SLH" kind="show" identifier="fromSigninToHome" id="7Cg-A1-ecH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ki-NY-xx0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1458" y="-137"/>
+            <point key="canvasLocation" x="1457.9710144927537" y="-137.27678571428569"/>
         </scene>
         <!--Item 2-->
         <scene sceneID="azj-cV-aC0">
@@ -146,7 +147,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Z5u-RP-rbq">
             <objects>
-                <tabBarController id="vGR-qt-SLH" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="homeScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vGR-qt-SLH" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="s87-78-bZJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -164,7 +165,7 @@
         <!--physicianLogin-->
         <scene sceneID="Bhs-1I-KQh">
             <objects>
-                <viewController storyboardIdentifier="physicianView" title="physicianLogin" useStoryboardIdentifierAsRestorationIdentifier="YES" id="59k-s7-nBu" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="physicianView" title="physicianLogin" useStoryboardIdentifierAsRestorationIdentifier="YES" id="59k-s7-nBu" customClass="signupVC" customModule="HealthRxApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xAQ-W8-U1D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -206,11 +207,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" image="signup_button"/>
+                                <connections>
+                                    <action selector="signUp:" destination="59k-s7-nBu" eventType="touchUpInside" id="Y00-vb-fem"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="BUK-do-sD8"/>
                     </view>
+                    <connections>
+                        <outlet property="passRegister" destination="pFI-tu-v4F" id="GHp-fc-KAA"/>
+                        <outlet property="userRegister" destination="15p-M6-qpB" id="6iO-VH-q7P"/>
+                        <outlet property="verifyPass" destination="9dZ-eE-0fQ" id="9Po-rG-6yi"/>
+                        <segue destination="vGR-qt-SLH" kind="show" identifier="toHomeScreen" id="tJW-9K-i8K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbI-ib-jpO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -225,4 +235,7 @@
         <image name="signup_button" width="57" height="12"/>
         <image name="welcomeScreen" width="414" height="896"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="7Cg-A1-ecH"/>
+    </inferredMetricsTieBreakers>
 </document>

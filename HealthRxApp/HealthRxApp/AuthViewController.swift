@@ -15,24 +15,19 @@ class AuthViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    var loginMode = true
     
-    @IBAction func login(_ sender: Any){
-        if let email = emailTextField.text{
-            if let password = passwordTextField.text{
-                if loginMode{
-                    
-                } else{
-                    Auth.auth().createUser(withEmail: email, password: password) {(result,error)
-                        in
-                        if error != nil{
-                            print("User Created!")
-                        }
-                    }
-                }
+    @IBAction func loginToHome(_ sender: Any) {
+        if let email = emailTextField.text, let password = passwordTextField.text{
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            if error == nil {
+                self.performSegue(withIdentifier: "fromSigninToHome", sender: nil)
+                
+            } else {
+                print(error)
             }
-        }
+            }}
     }
+    
     
     
     
