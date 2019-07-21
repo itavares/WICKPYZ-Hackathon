@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import * as ROUTES  from '../constants/routes';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { Navbar, Nav, NavDropdown, Container, Image } from 'react-bootstrap'
+// import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap'
 
 
 import './NavBar.css'
