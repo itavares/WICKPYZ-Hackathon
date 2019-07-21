@@ -12,6 +12,7 @@ import HomePage from '../Home/Home';
 import AccountPage from '../Account/CreateAccount';
 import AdminPage from '../Admin/Admin';
 import PatientHomepage from '../Patient/Patient';
+import LogBook from '../Patient/LogBook';
 
 // Import routes
 import * as ROUTES from '../constants/routes';
@@ -38,6 +39,7 @@ const App = () => (
     <Route path={ROUTES.ACCOUNT} component={AccountPage} />
     <Route path={ROUTES.ADMIN} component={AdminPage} />
     <Route path={ROUTES.PATIENT_HOME} component={PatientHomepage}/>
+    <Route path={ROUTES.LOGBOOK} component={LogBook}/>
   </div>
 </Router>
 //   <Route>
