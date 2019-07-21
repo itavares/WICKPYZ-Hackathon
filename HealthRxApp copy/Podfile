@@ -1,0 +1,12 @@
+target 'HealthRxApp' do
+platform :ios, '12.1'
+
+pod 'Firebase'
+pod 'Firebase/Database'
+pod 'Firebase/Auth'
+pod 'FontAwesomeKit'
+pod 'SwiftyJSON'
+pod 'FirebaseUI/Auth'
+pod 'FirebaseUI/Email'
+pod 'FirebaseUI/Google'
+end
