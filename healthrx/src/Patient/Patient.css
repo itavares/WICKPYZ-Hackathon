@@ -1,43 +1,5 @@
 
-body{
-   color:rgb(59, 59, 59);
-}
-#score {
-   display: block;
-   height:2.4em;
-   width: 2.4em;
-   line-height:2.2em;
-   -moz-border-radius: 50%; /* or 50% */
-   border-radius: 50%; /* or 50% */
-   border: solid rgb(255, 238, 0) 5px; 
-   background-color: rgba(255, 240, 31,0.5); 
-   color: white;
-   text-align: center;
-   font-size: 4.1em;  
-   margin-left: auto; 
-   margin-right: auto; 
-   font-weight: 600; 
-}
-
-#crisis-line {
-   font-size: 25px; 
-}
-
-#icon{
-   font-size: 100px;
-}   
-#chat{
-   font-size: 2px;
-}
-.py-3{
-   background-color: #4cb3d6;
-   box-shadow: 5px 6px 20px 10px rgba(102, 102, 128,0.3); 
-   border:none; 
-   color: white;
-   width: 325px;
-   margin-top: 5px; 
-}
-.py-3:hover{
-   background-color: #3c8ca7;
-   color: white; 
-}
+ #log{
+    font-size: 40px;
+    padding: 50px;
+ }

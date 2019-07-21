@@ -11,13 +11,15 @@ import PasswordForgetPage from '../PasswordForget/PasswordForget';
 import HomePage from '../Home/Home';
 import AccountPage from '../Account/CreateAccount';
 import AdminPage from '../Admin/Admin';
+<<<<<<< HEAD
 
 import prevlog from '../Patient/PrevLog.js';
 import logbook from '../Patient/LogBook.js';
 
 
+=======
+>>>>>>> parent of dd385d08... Merge branch 'master' of https://github.com/itavares/WICKPYZ-Hackathon
 import PatientHomepage from '../Patient/Patient';
-import DoctorHomepage from '../Patient/Doctor';
 
 // Import routes
 import * as ROUTES from '../constants/routes';
@@ -30,7 +32,9 @@ const App = () => (
   <Router>
   <div>
     <Navigation />
+
     <hr />
+
     <Route exact path={ROUTES.LANDING} component={HomePage} />
     <Route path={ROUTES.LOGIN_DOCTOR} component={LoginDoctor} />
     <Route path={ROUTES.LOGIN_PATIENT} component={LoginPatient} />
@@ -44,12 +48,7 @@ const App = () => (
     <Route path={ROUTES.HOME} component={HomePage} />
     <Route path={ROUTES.ACCOUNT} component={AccountPage} />
     <Route path={ROUTES.ADMIN} component={AdminPage} />
-
-
     <Route path={ROUTES.PATIENT_HOME} component={PatientHomepage}/>
-
-
-    <Route path={ROUTES.DOCTOR_HOME} component={DoctorHomepage}/>
   </div>
 </Router>
 //   <Route>

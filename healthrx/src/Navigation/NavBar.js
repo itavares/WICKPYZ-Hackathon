@@ -51,7 +51,11 @@ class PatientNavBarAuth extends Component {
                     <Navbar.Collapse id="responsive-navbar-nav">
 
                         <Nav className="mr-auto">
+<<<<<<< HEAD
                             <Link to={ROUTES.DOCTOR_HOME}> Home</Link>
+=======
+                            <Link to={ROUTES.HOME}> Home</Link>
+>>>>>>> parent of dd385d08... Merge branch 'master' of https://github.com/itavares/WICKPYZ-Hackathon
                             
                         </Nav>
 

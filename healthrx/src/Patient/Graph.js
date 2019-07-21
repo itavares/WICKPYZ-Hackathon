@@ -41,53 +41,27 @@ class Graph extends Component {
             },
             data: [{
                 type: "line",
-                showInLegend: true,
-                name: "Prozac",
-		        markerType: "square",
                 toolTipContent: "Day - {x}: {y}%",
                 dataPoints: [
-                    { x: new Date(2017, 1, 1), y: 7.5 },
-                    { x: new Date(2017, 1, 2), y: 3.4 },
-                    { x: new Date(2017, 1, 3), y: 6.8 },
-                    { x: new Date(2017, 1, 4), y: 12.2 },
-                    { x: new Date(2017, 1, 5), y: 8.9 },
-                    { x: new Date(2017, 1, 6), y: 10.3 },
-                    { x: new Date(2017, 1, 7), y: 7.4 },
-                    { x: new Date(2017, 1, 8), y: 8.4 },
-                    { x: new Date(2017, 1, 9), y: 6.6},
-                    { x: new Date(2017, 1, 10), y: 8.3},
-                    { x: new Date(2017, 1, 11), y: 9.7},
-                    { x: new Date(2017, 1, 12), y: 10.9}
+                    { x: new Date(2017, 0, 1), y: 120 },
+                    { x: new Date(2017, 1, 1), y: 135 },
+                    { x: new Date(2017, 2, 1), y: 144 },
+                    { x: new Date(2017, 3, 1), y: 103 },
+                    { x: new Date(2017, 4, 1), y: 93 },
+                    { x: new Date(2017, 5, 1), y: 129 },
+                    { x: new Date(2017, 6, 1), y: 143 },
+                    { x: new Date(2017, 7, 1), y: 156 },
+                    { x: new Date(2017, 8, 1), y: 122 },
+                    { x: new Date(2017, 9, 1), y: 106 },
+                    { x: new Date(2017, 10, 1), y: 137 },
+                    { x: new Date(2017, 11, 1), y: 142 }
                 ]
-            },
-            {
-                type: "line",
-                showInLegend: true,
-                name: "Zoloft",
-		        markerType: "square",
-                toolTipContent: "Day - {x}: {y}%",
-                dataPoints: [
-                    { x: new Date(2017, 2, 1), y: 9.3 },
-                    { x: new Date(2017, 2, 2), y: 6.2 },
-                    { x: new Date(2017, 2, 3), y: 6.8 },
-                    { x: new Date(2017, 2, 4), y: 4.5 },
-                    { x: new Date(2017, 2, 5), y: 5.9 },
-                    { x: new Date(2017, 2, 6), y: 4.2 },
-                    { x: new Date(2017, 2, 7), y: 4.0 },
-                    { x: new Date(2017, 2, 8), y: 3.4 },
-                    { x: new Date(2017, 2, 9), y: 3.5},
-                    { x: new Date(2017, 2, 10), y: 3.0},
-                    { x: new Date(2017, 2, 11), y: 3.3},
-                    { x: new Date(2017, 2, 12), y:3.0}
-                    
-                ]
-            }
-                ]
+            }]
         }
         
         return (
         <div>
-            {/* <h1>Data from last 3</h1> */}
+            <h1>React Line Chart</h1>
             <CanvasJSChart options = {options} 
                 /* onRef={ref => this.chart = ref} */
             />

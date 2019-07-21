@@ -13,6 +13,7 @@ class assessmentViewController: UIViewController {
     var currInd = 0
     let orgPosX = 0
     let orgPosY = 0
+    var dayScore: [Int] = []
     
     @IBOutlet weak var question: UILabel!
     
@@ -55,13 +56,21 @@ class assessmentViewController: UIViewController {
                     card.alpha = 0
                     
                 })
-                
-                self.currInd += 1
-                self.question.text = self.questions[self.currInd]
-                UIView.animate(withDuration: 0.85, animations:{ self.card.center = CGPoint(x: 207, y: 445.5)
-                    card.alpha = 1
-                    self.AnswerImg.alpha = 0
-                })
+                dayScore.insert(0, at: self.currInd)
+                if self.currInd < questions.count - 1
+                {
+                    self.currInd += 1
+                    self.question.text = self.questions[self.currInd]
+                    UIView.animate(withDuration: 0.85, animations:{ self.card.center = CGPoint(x: 207, y: 445.5)
+                        card.alpha = 1
+                        self.AnswerImg.alpha = 0
+                        print(self.dayScore)
+                    })
+                }
+                else{
+                    print(dayScore)
+                    print("Done")
+                }
                 
             } else if card.center.x > (view.frame.width - 60){
                 //Move off to the right side
@@ -70,12 +79,21 @@ class assessmentViewController: UIViewController {
                     card.alpha = 0
                     
                 })
-                self.currInd += 1
-                self.question.text = self.questions[self.currInd]
-                UIView.animate(withDuration: 0.85, animations:{ self.card.center = CGPoint(x: 207, y: 445.5)
-                    card.alpha = 1
-                    self.AnswerImg.alpha = 0
-                })
+                dayScore.insert(1, at: self.currInd)
+                if self.currInd < questions.count - 1
+                    {
+                    self.currInd += 1
+                    self.question.text = self.questions[self.currInd]
+                    UIView.animate(withDuration: 0.85, animations:{ self.card.center = CGPoint(x: 207, y: 445.5)
+                        card.alpha = 1
+                        self.AnswerImg.alpha = 0
+                        print(self.dayScore)
+                    })
+                }
+                else{
+                    print(dayScore)
+                    print("Done")
+                }
             }
             
         }
@@ -87,10 +105,9 @@ class assessmentViewController: UIViewController {
     func restartCard(){
         UIView.animate(withDuration: 0.2, animations: {self.card.center = self.view.center
             self.AnswerImg.alpha = 0
-            self.currInd -= 1
-            self.question.text = self.questions[self.currInd]
-            self.card.alpha = 1
+            
         })
+        
     }
     
 }
