@@ -1,11 +1,10 @@
 import React from 'react';
 import './App.css';
-import {  BrowserRouter as Router,
-          Route,
-} from 'react-router-dom';
+import {  BrowserRouter as Router, Route,} from 'react-router-dom';
 
-import Navigation from '../Navigation/Navigation';
-// import LandingPage from '../Landing/Landing';
+
+
+import Navigation from '../Navigation/NavBar';
 import LoginPatient from '../Login/PatientLogin';
 import LoginDoctor from '../Login/DoctorLogin';
 import PasswordForgetPage from '../PasswordForget/PasswordForget';
@@ -15,33 +14,47 @@ import AdminPage from '../Admin/Admin';
 
 // Import routes
 import * as ROUTES from '../constants/routes';
+import { withFirebase } from '../Firebase/index';
+import { AuthUserContext } from '../Session/Session';
+import { withAuthentication } from '../Session/Session';
 
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-      <Router>
-      <div>
-      {/* <Navigation /> */}
+const App = () => (
+  <Router>
+  <div>
+    <Navigation />
 
-      <hr />
+    <hr />
 
-      <Route exact path={ROUTES.LANDING} component={HomePage} />
+    <Route exact path={ROUTES.LANDING} component={HomePage} />
+    <Route path={ROUTES.LOGIN_DOCTOR} component={LoginDoctor} />
+    <Route path={ROUTES.LOGIN_PATIENT} component={LoginPatient} />
+    <Route
+      path={ROUTES.PASSWORD_FORGET}
+      component={PasswordForgetPage}
+    />
+    <Route path={ROUTES.HOME} component={HomePage} />
+    <Route path={ROUTES.ACCOUNT} component={AccountPage} />
+    <Route path={ROUTES.ADMIN} component={AdminPage} />
+  </div>
+</Router>
+//   <Route>
+//   <div >
+//         <Navigation />
+     
+       
+//         <hr/>
 
-      <Route path={ROUTES.LOGIN_PATIENT} component={LoginPatient} />
-      <Route path={ROUTES.LOGIN_DOCTOR} component={LoginDoctor}/>
-      <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage} />
-      <Route path={ROUTES.HOME} component={HomePage} />
-      <Route path={ROUTES.ACCOUNT} component={AccountPage} />
-      <Route path={ROUTES.ADMIN} component={AdminPage} />
-    </div>
-
-      </Router>
-
-      </header>
-    </div>
+//         <Route exact path={ROUTES.LANDING} component={HomePage} />
+//         <Route path={ROUTES.LOGIN_PATIENT} component={LoginPatient} />
+//         <Route path={ROUTES.LOGIN_DOCTOR} component={LoginDoctor}/>
+//         <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage} />
+//         <Route path={ROUTES.HOME} component={HomePage} />
+//         <Route path={ROUTES.ACCOUNT} component={AccountPage} />
+//         <Route path={ROUTES.ADMIN} component={AdminPage} />
+     
+//       </div>
+// </Route>
   );
-}
 
-export default App;
+  export default withAuthentication(App);

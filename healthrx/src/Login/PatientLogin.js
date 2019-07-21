@@ -49,7 +49,7 @@ class PatientLogin extends Component {
             this.props.history.push(ROUTES.HOME); // REDIRECTS TO USERS HOME 
           })
           .catch(error => {
-            this.setState({ error });
+            this.setState({ error: error });
           });
     
         event.preventDefault();
@@ -58,7 +58,7 @@ class PatientLogin extends Component {
 
     render() {
         const { email, password, error } = this.state;
-        const isInvalid = password === '' || email === '' ;
+        // const isInvalid = password === '' || email === '' ;
 
 
         return (
