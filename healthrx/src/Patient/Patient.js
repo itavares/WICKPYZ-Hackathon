@@ -1,25 +1,28 @@
 import React, { Component } from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 
+import Graph from './Graph'
+
 import './Patient.css'
+
 
 class Patient extends Component {
     render() {
         return(
             <div>
-                <h1> Patient Page </h1>
+                {/* <h1> Patient Page </h1> */}
                 <Container>
                     <Row className="my-3 py-3">
-                        <Col>
-                            <Button className="py-3" size="lg" variant="primary" block>Logbook</Button>
+                        <Col md="auto">
+                            <Button id="log" className="" size="sm" variant="primary" block><i class="far fa-clipboard"></i><br></br>Log</Button>
                         </Col>
-                        <Col>
-                            <Button className="py-3" size="lg" variant="secondary" block>Diagnosis</Button>
+                        <Col md="auto">
+                            <Button className="py-3" id="test" size="lg" variant="secondary" block>Diagnosis</Button>
                         </Col>
-                        <Col>
+                        <Col md="auto">
                             <Button className="py-3" size="lg" variant="success" block>Resource</Button>
                         </Col>
-                        <Col>
+                        <Col md="auto">
                             <Button className="py-3" size="lg" variant="warning" block>Appointment</Button>
                         </Col>
                     </Row>
@@ -35,6 +38,8 @@ class Patient extends Component {
                     </Row>
 
                 </Container>
+
+                <Graph/>
             </div>
         );
     }
