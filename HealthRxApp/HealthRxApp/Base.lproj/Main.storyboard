@@ -33,6 +33,10 @@
                                     <segue destination="gK6-IM-xRA" kind="show" id="kK9-1M-ifh"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="67721900_452675478798639_1225323181359759360_n" translatesAutoresizingMaskIntoConstraints="NO" id="Edz-ia-XHn">
+                                <rect key="frame" x="26" y="387" width="363" height="219"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -98,6 +102,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="67721900_452675478798639_1225323181359759360_n" translatesAutoresizingMaskIntoConstraints="NO" id="hZJ-E0-4pS">
+                                <rect key="frame" x="31" y="282" width="363" height="219"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fsX-7R-sqY"/>
@@ -153,9 +161,9 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMb-1a-QGw">
-                                        <rect key="frame" x="24" y="0.0" width="284" height="79"/>
+                                        <rect key="frame" x="33" y="8" width="284" height="363"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -175,6 +183,14 @@
                                     <action selector="restart:" destination="3KX-Ue-K4R" eventType="touchUpInside" id="Zaf-AH-BeM"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="67190862_2449723528583192_1901866507135090688_n" translatesAutoresizingMaskIntoConstraints="NO" id="ZS9-8N-cs0">
+                                <rect key="frame" x="32" y="0.0" width="358" height="272"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="67195735_1300192286815594_1973367052504662016_n" translatesAutoresizingMaskIntoConstraints="NO" id="sE8-UW-MCc">
+                                <rect key="frame" x="0.0" y="64" width="441" height="144"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="t2C-dT-tr8"/>
@@ -264,6 +280,10 @@
                                     <action selector="signUp:" destination="59k-s7-nBu" eventType="touchUpInside" id="038-QG-q4T"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="67721900_452675478798639_1225323181359759360_n" translatesAutoresizingMaskIntoConstraints="NO" id="iza-RC-m3U">
+                                <rect key="frame" x="37" y="283" width="341" height="226"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="BUK-do-sD8"/>
@@ -277,10 +297,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbI-ib-jpO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1458" y="639"/>
+            <point key="canvasLocation" x="1457.9710144927537" y="638.83928571428567"/>
         </scene>
     </scenes>
     <resources>
+        <image name="67190862_2449723528583192_1901866507135090688_n" width="600" height="300"/>
+        <image name="67195735_1300192286815594_1973367052504662016_n" width="600" height="300"/>
+        <image name="67721900_452675478798639_1225323181359759360_n" width="600" height="300"/>
         <image name="Cards" width="404" height="473"/>
         <image name="Large-Input" width="414" height="60"/>
         <image name="No" width="188" height="130"/>
@@ -292,6 +315,6 @@
         <image name="welcomeScreen" width="414" height="896"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tJW-9K-i8K"/>
+        <segue reference="7Cg-A1-ecH"/>
     </inferredMetricsTieBreakers>
 </document>

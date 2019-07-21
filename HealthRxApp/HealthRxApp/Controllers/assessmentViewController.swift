@@ -16,7 +16,7 @@ class assessmentViewController: UIViewController {
     
     
     
-    var questions:[String] = []
+    var questions:[String] = ["Little interest or pleasure in doing things?","Feeling down, depressed, or hopeless?","Trouble falling or staying asleep, or sleeping too much?"]
     var currInd = 0
     let orgPosX = 0
     let orgPosY = 0
@@ -68,7 +68,7 @@ class assessmentViewController: UIViewController {
             AnswerImg.alpha = abs(xFromCenter) / view.center.x
         
         if sender.state == UIGestureRecognizer.State.ended{
-            if card.center.x < 60 {
+            if card.center.x < 80 {
                 //Move off to the left side
                 // No
                 UIView.animate(withDuration: 0.3, animations:{ card.center = CGPoint(x: card.center.x - 200, y: card.center.y + 75)
@@ -91,7 +91,7 @@ class assessmentViewController: UIViewController {
                     print("Done")
                 }
                 
-            } else if card.center.x > (view.frame.width - 60){
+            } else if card.center.x > (view.frame.width - 80){
                 //Move off to the right side
                 // Yes
                 UIView.animate(withDuration: 0.85, animations:{ card.center = CGPoint(x: card.center.x + 200, y: card.center.y + 75)
