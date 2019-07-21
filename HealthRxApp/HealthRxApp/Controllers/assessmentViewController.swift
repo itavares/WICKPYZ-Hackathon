@@ -7,14 +7,21 @@
 //
 
 import UIKit
-
+import Firebase
+import Firebase
+import SwiftyJSON
 class assessmentViewController: UIViewController {
-    let questions = ["1","2","3"]
+    var db: Firestore!
+    var questionnaires: [String:Any] = [:]
+    
+    
+    
+    var questions:[String] = []
     var currInd = 0
     let orgPosX = 0
     let orgPosY = 0
     var dayScore: [Int] = []
-    
+
     @IBOutlet weak var question: UILabel!
     
     @IBOutlet weak var AnswerImg: UIImageView!
@@ -25,11 +32,23 @@ class assessmentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        question.text = questions[currInd]
-        print(card.center)
-//        print("HERE")
-//        print(orgPosX!)
-//        print(orgPosY!)
+        let settings = FirestoreSettings()
+        Firestore.firestore().settings = settings
+        db = Firestore.firestore()
+//        question.text = questions[currInd]
+        db.collection("questionnaires").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+
+                    self.questionnaires[document.documentID] = document.data()
+                }
+//                let qst = self.questionnaires["PHQ9"]!.values as String
+//                print(qst)
+
+            }
+        }
 
         // Do any additional setup after loading the view.
     }

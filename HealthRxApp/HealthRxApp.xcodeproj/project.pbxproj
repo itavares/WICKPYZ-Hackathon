@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		542B6B4022E408D600492685 /* assessmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542B6B3F22E408D600492685 /* assessmentViewController.swift */; };
 		5473F01122E3EF20001CF9EE /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5473F01022E3EF20001CF9EE /* AuthViewController.swift */; };
-		5473F01322E3F0B4001CF9EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5473F01222E3F0B4001CF9EE /* GoogleService-Info.plist */; };
 		5493DE5E22E4727B00E5A489 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5493DE5C22E4727B00E5A489 /* Main.storyboard */; };
+		D3117FB122E4843F0038BB68 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3117FB022E4843F0038BB68 /* GoogleService-Info.plist */; };
+		D32963F022E48B3000EE7364 /* signupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32963EF22E48B3000EE7364 /* signupVC.swift */; };
+		D32963F322E4A1BF00EE7364 /* questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32963F222E4A1BF00EE7364 /* questions.swift */; };
 		D3B6A3132B904107A1287B41 /* libPods-HealthRxApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F047F62EB68826574942A24B /* libPods-HealthRxApp.a */; };
 		D3D6340422E36C3E0039C2BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6340322E36C3E0039C2BB /* AppDelegate.swift */; };
 		D3D6340622E36C3E0039C2BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6340522E36C3E0039C2BB /* ViewController.swift */; };
@@ -23,9 +25,12 @@
 		297C3F50A8FA88BCFC179079 /* Pods-HealthRxApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthRxApp.debug.xcconfig"; path = "Target Support Files/Pods-HealthRxApp/Pods-HealthRxApp.debug.xcconfig"; sourceTree = "<group>"; };
 		542B6B3F22E408D600492685 /* assessmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = assessmentViewController.swift; sourceTree = "<group>"; };
 		5473F01022E3EF20001CF9EE /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
-		5473F01222E3F0B4001CF9EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5493DE5D22E4727B00E5A489 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C69E847E0D5DD2197731D6D1 /* Pods-HealthRxApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthRxApp.release.xcconfig"; path = "Target Support Files/Pods-HealthRxApp/Pods-HealthRxApp.release.xcconfig"; sourceTree = "<group>"; };
+		D3117FB022E4843F0038BB68 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D32963EF22E48B3000EE7364 /* signupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signupVC.swift; sourceTree = "<group>"; };
+		D32963F122E48D4C00EE7364 /* HealthRxApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthRxApp.entitlements; sourceTree = "<group>"; };
+		D32963F222E4A1BF00EE7364 /* questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questions.swift; sourceTree = "<group>"; };
 		D3D6340022E36C3E0039C2BB /* HealthRxApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthRxApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3D6340322E36C3E0039C2BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3D6340522E36C3E0039C2BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +56,7 @@
 		542B6B3E22E4084200492685 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D32963EF22E48B3000EE7364 /* signupVC.swift */,
 				5473F01022E3EF20001CF9EE /* AuthViewController.swift */,
 				D3D6340522E36C3E0039C2BB /* ViewController.swift */,
 				542B6B3F22E408D600492685 /* assessmentViewController.swift */,
@@ -96,14 +102,16 @@
 		D3D6340222E36C3E0039C2BB /* HealthRxApp */ = {
 			isa = PBXGroup;
 			children = (
+				D32963F122E48D4C00EE7364 /* HealthRxApp.entitlements */,
 				542B6B3E22E4084200492685 /* Controllers */,
 				D3D6340322E36C3E0039C2BB /* AppDelegate.swift */,
 				D3D6340D22E36C3E0039C2BB /* Assets.xcassets */,
 				D3D6340F22E36C3E0039C2BB /* LaunchScreen.storyboard */,
 				5493DE5C22E4727B00E5A489 /* Main.storyboard */,
 				D3D6341222E36C3E0039C2BB /* Info.plist */,
+				D3117FB022E4843F0038BB68 /* GoogleService-Info.plist */,
 				D3D6340A22E36C3E0039C2BB /* HealthRxApp.xcdatamodeld */,
-				5473F01222E3F0B4001CF9EE /* GoogleService-Info.plist */,
+				D32963F222E4A1BF00EE7364 /* questions.swift */,
 			);
 			path = HealthRxApp;
 			sourceTree = "<group>";
@@ -142,6 +150,11 @@
 				TargetAttributes = {
 					D3D633FF22E36C3E0039C2BB = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -169,7 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3D6341122E36C3E0039C2BB /* LaunchScreen.storyboard in Resources */,
-				5473F01322E3F0B4001CF9EE /* GoogleService-Info.plist in Resources */,
+				D3117FB122E4843F0038BB68 /* GoogleService-Info.plist in Resources */,
 				D3D6340E22E36C3E0039C2BB /* Assets.xcassets in Resources */,
 				5493DE5E22E4727B00E5A489 /* Main.storyboard in Resources */,
 			);
@@ -226,7 +239,9 @@
 			files = (
 				5473F01122E3EF20001CF9EE /* AuthViewController.swift in Sources */,
 				D3D6340622E36C3E0039C2BB /* ViewController.swift in Sources */,
+				D32963F022E48B3000EE7364 /* signupVC.swift in Sources */,
 				D3D6340C22E36C3E0039C2BB /* HealthRxApp.xcdatamodeld in Sources */,
+				D32963F322E4A1BF00EE7364 /* questions.swift in Sources */,
 				D3D6340422E36C3E0039C2BB /* AppDelegate.swift in Sources */,
 				542B6B4022E408D600492685 /* assessmentViewController.swift in Sources */,
 			);
@@ -375,13 +390,15 @@
 			baseConfigurationReference = 297C3F50A8FA88BCFC179079 /* Pods-HealthRxApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HealthRxApp/HealthRxApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XYKRC3LZF7;
 				INFOPLIST_FILE = HealthRxApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Wustl.HealthRxApp;
+				PRODUCT_BUNDLE_IDENTIFIER = Wustl.HealthRXApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -393,13 +410,15 @@
 			baseConfigurationReference = C69E847E0D5DD2197731D6D1 /* Pods-HealthRxApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HealthRxApp/HealthRxApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XYKRC3LZF7;
 				INFOPLIST_FILE = HealthRxApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Wustl.HealthRxApp;
+				PRODUCT_BUNDLE_IDENTIFIER = Wustl.HealthRXApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

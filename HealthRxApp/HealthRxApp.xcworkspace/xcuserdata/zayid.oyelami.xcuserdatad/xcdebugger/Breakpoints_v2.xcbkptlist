@@ -96,5 +96,53 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HealthRxApp/Controllers/signupVC.swift"
+            timestampString = "585408344.1982729"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "signUp(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HealthRxApp.signupVC.signUp(Any) -&gt; ()"
+                  moduleName = "HealthRxApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zayid.oyelami/Documents/GitHub/WICKPYZ-Hackathon/HealthRxApp/HealthRxApp/Controllers/signupVC.swift"
+                  timestampString = "585406125.671979"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "1082">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in HealthRxApp.signupVC.signUp(Any) -&gt; ()"
+                  moduleName = "HealthRxApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zayid.oyelami/Documents/GitHub/WICKPYZ-Hackathon/HealthRxApp/HealthRxApp/Controllers/signupVC.swift"
+                  timestampString = "585406125.6741461"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "128">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
