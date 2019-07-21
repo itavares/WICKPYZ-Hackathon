@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		542B6B4022E408D600492685 /* assessmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542B6B3F22E408D600492685 /* assessmentViewController.swift */; };
 		5473F01122E3EF20001CF9EE /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5473F01022E3EF20001CF9EE /* AuthViewController.swift */; };
 		5473F01322E3F0B4001CF9EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5473F01222E3F0B4001CF9EE /* GoogleService-Info.plist */; };
-		D3117FAC22E3F37F0038BB68 /* signupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3117FAB22E3F37F0038BB68 /* signupVC.swift */; };
 		D3B6A3132B904107A1287B41 /* libPods-HealthRxApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F047F62EB68826574942A24B /* libPods-HealthRxApp.a */; };
 		D3D6340422E36C3E0039C2BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6340322E36C3E0039C2BB /* AppDelegate.swift */; };
 		D3D6340622E36C3E0039C2BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6340522E36C3E0039C2BB /* ViewController.swift */; };
@@ -21,10 +21,10 @@
 
 /* Begin PBXFileReference section */
 		297C3F50A8FA88BCFC179079 /* Pods-HealthRxApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthRxApp.debug.xcconfig"; path = "Target Support Files/Pods-HealthRxApp/Pods-HealthRxApp.debug.xcconfig"; sourceTree = "<group>"; };
+		542B6B3F22E408D600492685 /* assessmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = assessmentViewController.swift; sourceTree = "<group>"; };
 		5473F01022E3EF20001CF9EE /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		5473F01222E3F0B4001CF9EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C69E847E0D5DD2197731D6D1 /* Pods-HealthRxApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthRxApp.release.xcconfig"; path = "Target Support Files/Pods-HealthRxApp/Pods-HealthRxApp.release.xcconfig"; sourceTree = "<group>"; };
-		D3117FAB22E3F37F0038BB68 /* signupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signupVC.swift; sourceTree = "<group>"; };
 		D3D6340022E36C3E0039C2BB /* HealthRxApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthRxApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3D6340322E36C3E0039C2BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3D6340522E36C3E0039C2BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +48,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		542B6B3E22E4084200492685 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5473F01022E3EF20001CF9EE /* AuthViewController.swift */,
+				D3D6340522E36C3E0039C2BB /* ViewController.swift */,
+				542B6B3F22E408D600492685 /* assessmentViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		7930CEA3EB2B970C3CFB9D3E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,10 +96,8 @@
 		D3D6340222E36C3E0039C2BB /* HealthRxApp */ = {
 			isa = PBXGroup;
 			children = (
-				5473F01022E3EF20001CF9EE /* AuthViewController.swift */,
-				D3117FAB22E3F37F0038BB68 /* signupVC.swift */,
+				542B6B3E22E4084200492685 /* Controllers */,
 				D3D6340322E36C3E0039C2BB /* AppDelegate.swift */,
-				D3D6340522E36C3E0039C2BB /* ViewController.swift */,
 				D3D6340722E36C3E0039C2BB /* Main.storyboard */,
 				D3D6340D22E36C3E0039C2BB /* Assets.xcassets */,
 				D3D6340F22E36C3E0039C2BB /* LaunchScreen.storyboard */,
@@ -217,10 +225,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5473F01122E3EF20001CF9EE /* AuthViewController.swift in Sources */,
-				D3117FAC22E3F37F0038BB68 /* signupVC.swift in Sources */,
 				D3D6340622E36C3E0039C2BB /* ViewController.swift in Sources */,
 				D3D6340C22E36C3E0039C2BB /* HealthRxApp.xcdatamodeld in Sources */,
 				D3D6340422E36C3E0039C2BB /* AppDelegate.swift in Sources */,
+				542B6B4022E408D600492685 /* assessmentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3KX-Ue-K4R">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -112,7 +112,7 @@
             </objects>
             <point key="canvasLocation" x="1457.9710144927537" y="-137.27678571428569"/>
         </scene>
-        <!--Item 2-->
+        <!--Stats-->
         <scene sceneID="azj-cV-aC0">
             <objects>
                 <viewController id="PM7-PI-TlP" sceneMemberID="viewController">
@@ -122,27 +122,80 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="hxo-Fb-iiZ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="JNU-jg-XLv"/>
+                    <tabBarItem key="tabBarItem" title="Stats" id="JNU-jg-XLv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wvY-jw-ns5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3706" y="67"/>
         </scene>
-        <!--Item 1-->
+        <!--AssessmentQ1-->
         <scene sceneID="3bx-2m-sJ7">
             <objects>
-                <viewController id="3KX-Ue-K4R" sceneMemberID="viewController">
+                <viewController id="3KX-Ue-K4R" userLabel="AssessmentQ1" customClass="assessmentViewController" customModule="HealthRxApp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7sT-6k-EnR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardBoard" translatesAutoresizingMaskIntoConstraints="NO" id="aTf-wc-7uQ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jSJ-rA-Q38" userLabel="card">
+                                <rect key="frame" x="32" y="238" width="350" height="415"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cards" translatesAutoresizingMaskIntoConstraints="NO" id="7yd-IG-fpC">
+                                        <rect key="frame" x="-15" y="-14" width="379" height="444"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" image="No" translatesAutoresizingMaskIntoConstraints="NO" id="GFa-Qw-BtG">
+                                        <rect key="frame" x="101" y="140" width="131" height="95"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMb-1a-QGw">
+                                        <rect key="frame" x="24" y="0.0" width="284" height="79"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="7GM-ef-cvb" appends="YES" id="GiU-FW-ONh"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diL-mP-azb">
+                                <rect key="frame" x="182" y="200" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Restart">
+                                    <color key="titleColor" red="0.82310217618942261" green="0.93687266111373901" blue="0.95771116018295288" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="restart:" destination="3KX-Ue-K4R" eventType="touchUpInside" id="Zaf-AH-BeM"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="t2C-dT-tr8"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="88R-40-0Nd"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="88R-40-0Nd"/>
+                    <connections>
+                        <outlet property="AnswerImg" destination="GFa-Qw-BtG" id="njr-hI-mFc"/>
+                        <outlet property="answerImg" destination="GFa-Qw-BtG" id="yCW-oQ-kx4"/>
+                        <outlet property="card" destination="jSJ-rA-Q38" id="6wB-bt-TkI"/>
+                        <outlet property="cardBoard" destination="aTf-wc-7uQ" id="R3l-3G-4QU"/>
+                        <outlet property="question" destination="yMb-1a-QGw" id="Twu-bN-aIt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1xG-Vu-NuE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="7GM-ef-cvb">
+                    <connections>
+                        <action selector="panCard:" destination="3KX-Ue-K4R" id="Tc7-Ft-OX5"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3706" y="-674"/>
+            <point key="canvasLocation" x="3705.7971014492755" y="-674.33035714285711"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Z5u-RP-rbq">
@@ -151,7 +204,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="s87-78-bZJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.82310217618942261" green="0.93687266111373901" blue="0.95771116018295288" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="3KX-Ue-K4R" kind="relationship" relationship="viewControllers" id="atU-rz-DJy"/>
@@ -228,7 +281,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Cards" width="404" height="473"/>
         <image name="Large-Input" width="414" height="60"/>
+        <image name="No" width="188" height="130"/>
+        <image name="cardBoard" width="414" height="896"/>
         <image name="google_login" width="389" height="56"/>
         <image name="loginScreen" width="414" height="896"/>
         <image name="login_button" width="42" height="12"/>
@@ -236,6 +292,6 @@
         <image name="welcomeScreen" width="414" height="896"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7Cg-A1-ecH"/>
+        <segue reference="tJW-9K-i8K"/>
     </inferredMetricsTieBreakers>
 </document>
