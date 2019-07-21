@@ -3,6 +3,7 @@ import './Home.css'
 import { Row, Col, Container } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 
+import { withAuthorization } from '../Session/Session';
  
 import * as ROUTES  from '../constants/routes';
 
@@ -34,4 +35,7 @@ class Home extends Component {
     }
 }
 
-export default Home;
+const condition = authUser => !!authUser;
+
+export default withAuthorization(condition)(Home);
+// export default Home;
