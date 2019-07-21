@@ -48,7 +48,7 @@
         <!--patientLogin-->
         <scene sceneID="chC-aa-lP8">
             <objects>
-                <viewController storyboardIdentifier="patientView" title="patientLogin" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gK6-IM-xRA" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="patientView" title="patientLogin" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gK6-IM-xRA" customClass="AuthViewController" customModule="HealthRxApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SJi-YN-eeC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,11 +57,14 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="527"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCZ-0N-eww">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCZ-0N-eww" userLabel="patientLoginBtn">
                                 <rect key="frame" x="292" y="840" width="42" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" image="login_button"/>
+                                <connections>
+                                    <action selector="login:" destination="gK6-IM-xRA" eventType="touchUpInside" id="LPe-B5-SJA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfG-YK-gJA">
                                 <rect key="frame" x="85" y="839" width="57" height="26"/>
@@ -99,6 +102,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fsX-7R-sqY"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="GeD-pJ-zW3" id="0Z1-uq-zPF"/>
+                        <outlet property="passwordTextField" destination="nQd-fj-bhv" id="Qzu-b6-eJW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ki-NY-xx0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
