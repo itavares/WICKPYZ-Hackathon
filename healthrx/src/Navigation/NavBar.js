@@ -51,7 +51,7 @@ class PatientNavBarAuth extends Component {
                     <Navbar.Collapse id="responsive-navbar-nav">
 
                         <Nav className="mr-auto">
-                            <Link to={ROUTES.HOME}> Home</Link>
+                            <Link to={ROUTES.PATIENT_HOME}> Home</Link>
                             
                         </Nav>
 

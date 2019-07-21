@@ -6,8 +6,10 @@ import {  withFirebase } from '../Firebase';
 import * as ROUTES from '../constants/routes'
 import { withRouter } from 'react-router-dom';
 
-import {compose} from 'recompose';
 
+import {compose} from 'recompose';
+import Firebase from '../Firebase/Firebase';
+import '../Firebase/Firebase.js';
 
 const CreatAccountPage = () =>(
     <div>
@@ -27,6 +29,7 @@ const CreatAccountPage = () =>(
   };
 
 class CreateAccount extends Component {
+
     constructor(props) {
         super(props);
         this.state = { ...INITIAL_STATE };
@@ -38,9 +41,25 @@ class CreateAccount extends Component {
 
     onSubmit = event => {
         const { email, passwordOne } = this.state;
-
+        
+        let database = this.props.firebase.database;
+        // console.log(database);
+    
         this.props.firebase
           .doCreateUserWithEmailAndPassword(email, passwordOne)
+        
+
+            // Add to real time databsae
+            
+            // .then(authUser => {
+            //     // Create a user in your Firebase realtime database
+
+            //     // return this.props.firebase
+            //     //   .user(authUser.user.uid)
+            //     //   .set({
+            //     //     email,
+            //     //   });
+            //   })
           .then(authUser => {
             this.setState({ ...INITIAL_STATE });
             this.props.history.push(ROUTES.HOME); // REDIRECTS TO USERS HOME 
