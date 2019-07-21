@@ -1,4 +1,5 @@
 body{
+<<<<<<< HEAD
     background-color: #ccccfe;
     color: white;  
   }
@@ -43,3 +44,48 @@ body{
       color: black;
       font-size: 5rem;
   }
+=======
+  background-color: #ccccfe;
+  color: white;  
+}
+#options{
+  background: linear-gradient(135deg, #624bd6, #6abbd7);
+  max-width: 400px;
+  margin-top: 60px;
+  /* position: absolute;  */
+  padding: 50px;  
+  /* top: 50%; */
+  /* right: 0px;  */
+  border-radius: 8%; 
+  text-align: center; 
+  /* transform: translate(-50%, -50%); */
+  box-shadow: 0 30px 50px -20px rgb(46, 6, 66);
+}
+#options h1, h3{
+  font-size: 50px
+}
+.home-page-btn {
+  font-size: 50px; 
+  background-color: rgba(187, 187, 234,0.5); 
+  color: black; 
+  border:none; 
+}
+
+.home-page-btn:hover{
+  background-color: rgba(162, 162, 194,0.5);
+}
+#options p{
+  margin-top: 20px; 
+  margin-bottom: 20px; 
+  padding: 0px; 
+  font-size: 20px;
+}
+#options a {
+  color: white;
+}
+
+#intro {
+    color: black;
+    font-size: 5rem;
+}
+>>>>>>> firebase-authentication
