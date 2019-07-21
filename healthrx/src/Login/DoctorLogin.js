@@ -12,7 +12,7 @@ import {compose} from 'recompose';
 
 const DoctorLoginPage = () =>(
     <div>
-        <h2> Patient Login </h2>
+        <h2> Doctor Login </h2>
         <DoctorLoginForm/>
      
     </div>
@@ -24,6 +24,7 @@ const DoctorLoginPage = () =>(
 const INITIAL_STATE ={
     email: '',
     password: '',
+    dataset: [],
     error: null,
 };
 
@@ -55,6 +56,30 @@ class DoctorLogin extends Component {
         event.preventDefault();
 
     };
+
+
+    // componentDidMount() {
+    //     // this.setState(a{ loading: true });
+    //     this.unsubscribe = this.props.firebase
+    //       .patients()
+    //       .onSnapshot(snapshot => {
+    //         let dataset = [];
+    //         snapshot.forEach(doc =>
+    //           dataset.push({ ...doc.data(), uid: doc.id }),
+    //         );
+    //         console.log(dataset[0].period1Score[1]);
+    
+    //         this.setState({
+    //             dataset,
+    //           loading: false,
+    //         });
+    //       });
+    //   }
+    
+    //   componentWillUnmount() {
+    //     this.unsubscribe();
+    //   }
+
 
     render() {
         const { email, password, error } = this.state;

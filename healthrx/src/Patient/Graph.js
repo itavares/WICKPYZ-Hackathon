@@ -8,6 +8,10 @@ class Graph extends Component {
 
     constructor(props) {
         super(props);
+        this.state = ({
+            entries:[],
+            dataToDisplay: [],
+        })
     }
 
     componentDidMount() {
@@ -15,6 +19,9 @@ class Graph extends Component {
     }
 
     render() {
+
+
+
         const options = {
             animationEnabled: true,
             exportEnabled: true,
