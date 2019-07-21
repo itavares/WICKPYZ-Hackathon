@@ -12,7 +12,6 @@ import {compose} from 'recompose';
 
 const DoctorLoginPage = () =>(
     <div>
-        <h2> Doctor Login </h2>
         <DoctorLoginForm/>
      
     </div>
