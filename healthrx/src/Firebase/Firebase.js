@@ -1,5 +1,11 @@
 import app from'firebase/app';
 import 'firebase/auth';
+import 'firebase/database';
+
+
+
+const firebase = require('firebase');
+require('firebase/firestore');
 
 const config = {
   apiKey: "AIzaSyC3ZH1hjXHPZOtmSh71qR9U4BvjqDLEwBQ",
@@ -10,17 +16,29 @@ const config = {
   messagingSenderId: "883168315312"
 };
 
-// 
+//
 class Firebase {
   constructor() {
-    app.initializeApp(config);
+    
+    var db = app.initializeApp(config);
     
     this.auth = app.auth();
+    this.db = app.database();
+
+    global.db = db.firestore();
+    this.state ={
+      database:  db.firestore()
+
+    }
+    
   }
 
-  // AUTH API -
+  database1 = new Object();
 
-  
+ 
+    // *** AUTH  API ***
+
+
   // API to create user
   doCreateUserWithEmailAndPassword = (email, password) =>
     this.auth.createUserWithEmailAndPassword(email, password);
@@ -31,11 +49,20 @@ class Firebase {
   //f no user is authenticated, nothing will happen when this function is called
   doSignOut = () => this.auth.signOut();
 
+  //Future implementation
+  // doPasswordReset = email => this.auth.sendPasswordResetEmail(email);
 
-  doPasswordReset = email => this.auth.sendPasswordResetEmail(email);
+  // doPasswordUpdate = password =>
+  //   this.auth.currentUser.updatePassword(password);
 
-  doPasswordUpdate = password =>
-    this.auth.currentUser.updatePassword(password);
+
+
+    // *** User API ***
+
+    user = uid => this.db.ref(`users/${uid}`);
+
+    users = () => this.db.ref('users');
+    
 }
 
 export default Firebase;

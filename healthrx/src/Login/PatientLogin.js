@@ -44,6 +44,13 @@ class PatientLogin extends Component {
 
         this.props.firebase
           .doSignInWithEmailAndPassword(email, password)
+        //   .then(authUser => {
+        //     return this.props.firebase
+        //         .user(authUser.user.uid)
+        //         .set({
+        //             email,
+        //         });
+        //   })
           .then(() => {
             this.setState({ ...INITIAL_STATE });
             this.props.history.push(ROUTES.PATIENT_HOME); // REDIRECTS TO USERS HOME 
