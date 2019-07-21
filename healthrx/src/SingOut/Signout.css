@@ -1,0 +1,14 @@
+/* #this_beautiful_thing:hover {
+    color: #16181b;
+    text-decoration: none;
+    background-color: #f8f9fa;
+}
+#this_beautiful_thing:focus, #this_beautiful_thing:hover {
+    color: #16181b;
+    text-decoration: none;
+    background-color: #f8f9fa
+} */
+
+#this_beautiful_thing{
+    color: black;
+}
