@@ -33,7 +33,9 @@ class PatientNavBarAuth extends Component {
     //         navMsg: ""
     //     }
     // }
-
+    redirectToHome = () => {
+        this.props.history.push(ROUTES.PATIENT_HOME);
+    }
 
     render() {
 
@@ -46,7 +48,7 @@ class PatientNavBarAuth extends Component {
 
                 <Container>
 
-                    <Navbar.Brand href="#home">HealthtRx</Navbar.Brand>
+                    <Navbar.Brand onClick={this.redirectToHome}>HealthtRx</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
 
