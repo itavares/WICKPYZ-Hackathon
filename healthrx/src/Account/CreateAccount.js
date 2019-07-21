@@ -25,6 +25,8 @@ const CreatAccountPage = () =>(
     email: '',
     passwordOne: '',
     passwordTwo: '',
+    username: '',
+    dataset: [],
     error: null,
   };
 
@@ -37,29 +39,35 @@ class CreateAccount extends Component {
 
     onChange = event => {
         this.setState({ [event.target.name]: event.target.value });
+        // this.setState({
+        //     username: event.target.value,
+        //     email: event.target.value
+        // })
       };
 
     onSubmit = event => {
         const { email, passwordOne } = this.state;
-        
         let database = this.props.firebase.database;
+        this.setState({
+            username: this.state.email, 
+        });
         // console.log(database);
     
         this.props.firebase
           .doCreateUserWithEmailAndPassword(email, passwordOne)
         
 
-            // Add to real time databsae
             
-            // .then(authUser => {
-            //     // Create a user in your Firebase realtime database
+            .then(authUser => {
+                return this.props.firebase.user(authUser.user.uid).set(
+                  {
+                    email,
+                  },
+                  { merge: true },
+                );
+              })
 
-            //     // return this.props.firebase
-            //     //   .user(authUser.user.uid)
-            //     //   .set({
-            //     //     email,
-            //     //   });
-            //   })
+
           .then(authUser => {
             this.setState({ ...INITIAL_STATE });
             this.props.history.push(ROUTES.HOME); // REDIRECTS TO USERS HOME 
@@ -71,6 +79,33 @@ class CreateAccount extends Component {
         event.preventDefault();
 
     };
+
+
+///
+// componentDidMount() {
+//     // this.setState(a{ loading: true });
+//     this.unsubscribe = this.props.firebase
+//       .patients()
+//       .onSnapshot(snapshot => {
+//         let dataset = [];
+//         snapshot.forEach(doc =>
+//           dataset.push({ ...doc.data(), uid: doc.id }),
+//         );
+//         console.log(dataset[0].period1Score[1]);
+
+//         this.setState({
+//             dataset,
+//           loading: false,
+//         });
+//       });
+//   }
+
+//   componentWillUnmount() {
+//     this.unsubscribe();
+//   }
+
+////
+
 
     render() {
 

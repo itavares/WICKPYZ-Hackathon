@@ -12,6 +12,9 @@ import HomePage from '../Home/Home';
 import AccountPage from '../Account/CreateAccount';
 import AdminPage from '../Admin/Admin';
 
+import prevlog from '../Patient/PrevLog.js';
+import logbook from '../Patient/LogBook.js';
+
 
 import PatientHomepage from '../Patient/Patient';
 import DoctorHomepage from '../Patient/Doctor';
@@ -35,6 +38,9 @@ const App = () => (
       path={ROUTES.PASSWORD_FORGET}
       component={PasswordForgetPage}
     />
+
+    <Route path={ROUTES.LOGBOOK} component={logbook}/>
+    <Route path={ROUTES.PREVLOG} component={prevlog}/>
     <Route path={ROUTES.HOME} component={HomePage} />
     <Route path={ROUTES.ACCOUNT} component={AccountPage} />
     <Route path={ROUTES.ADMIN} component={AdminPage} />
