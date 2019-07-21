@@ -34,7 +34,6 @@ class PatientNavBarAuth extends Component {
     //     }
     // }
 
-
     render() {
 
         // if(this.props.type == "doctor") {
@@ -45,19 +44,17 @@ class PatientNavBarAuth extends Component {
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
 
                 <Container>
-
-                    <Navbar.Brand href="#home">HealthtRx</Navbar.Brand>
+                    <Navbar.Brand href="#home"> <img id="logoImage" src={ require('./logo2.png') } /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
 
                         <Nav className="mr-auto">
-                            <Link to={ROUTES.DOCTOR_HOME}> Home</Link>
-                            
+                            <Link to={ROUTES.DOCTOR_HOME}> <i class="fa fa-home" aria-hidden="true"></i></Link>                     
                         </Nav>
 
                         <Nav>
-                            <NavDropdown title="PT" id="collasible-nav-dropdown" className="patient-name mr-4">
-                                <NavDropdown.Item href="#action/3.1">Dank Memes</NavDropdown.Item>
+                            <NavDropdown title="DR" id="collasible-nav-dropdown" className="patient-name mr-4">
+                                <NavDropdown.Item href="#action/3.1">Profile</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">My Provider</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.3">Settings</NavDropdown.Item>
                                 <NavDropdown.Divider />

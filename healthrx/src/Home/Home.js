@@ -7,13 +7,21 @@ import { withAuthorization } from '../Session/Session';
  
 import * as ROUTES  from '../constants/routes';
 
+import logo from '../Navigation/logo2.png';
+
+
+const displayLogo = () => (
+    <img src={logo} alt="logoimage"> </img>
+)
+
 class Home extends Component {
     render() {
         return (
             <Container> 
                 <Row className="h-100">
                     <Col id="intro" className="my-auto">
-                        <span className="align-middle text-center">Welcome To Health Rx.</span>
+                        <span className="align-middle text-center"> <img src={ require('../Navigation/logo2.png') } />
+</span>
                     </Col> 
                     <Col>
                         <div id="options" className="align-middle text-center">

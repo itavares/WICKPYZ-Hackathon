@@ -25,19 +25,22 @@ class Graph extends Component {
         const options = {
             animationEnabled: true,
             exportEnabled: true,
+            zoomEnabled: true,
             theme: "light2", // "light1", "dark1", "dark2"
+            height: 500, 
             title:{
-                text: "Scores from last 30 days"
+                text: "Comparison of drugs 1 and 2",
+                fontFamily: "Arial",
             },
             axisY: {
                 title: "Overall Score",
-                includeZero: false,
+                includeZero: true,
                 suffix: ""
             },
             axisX: {
-                title: "Date",
+                title: "Number of days",
                 prefix: "",
-                interval: 2
+                interval: 1
             },
             data: [{
                 type: "line",
@@ -46,18 +49,17 @@ class Graph extends Component {
 		        markerType: "square",
                 toolTipContent: "Day - {x}: {y}%",
                 dataPoints: [
-                    { x: new Date(2017, 1, 1), y: 7.5 },
-                    { x: new Date(2017, 1, 2), y: 3.4 },
-                    { x: new Date(2017, 1, 3), y: 6.8 },
-                    { x: new Date(2017, 1, 4), y: 12.2 },
-                    { x: new Date(2017, 1, 5), y: 8.9 },
-                    { x: new Date(2017, 1, 6), y: 10.3 },
-                    { x: new Date(2017, 1, 7), y: 7.4 },
-                    { x: new Date(2017, 1, 8), y: 8.4 },
-                    { x: new Date(2017, 1, 9), y: 6.6},
-                    { x: new Date(2017, 1, 10), y: 8.3},
-                    { x: new Date(2017, 1, 11), y: 9.7},
-                    { x: new Date(2017, 1, 12), y: 10.9}
+                    { x: 0, y: 7.5 },
+                    { x: 1, y: 3.4 },
+                    { x: 2, y: 6.8 },
+                    { x: 3, y: 12.2 },
+                    { x: 5, y: 8.9 },
+                    { x: 6, y: 10.3 },
+                    { x: 7, y: 7.4 },
+                    { x: 8, y: 8.4 },
+                    { x: 9, y: 6.6},
+                    { x: 10, y: 8.3},
+                    { x: 11, y: 9.7},
                 ]
             },
             {
@@ -67,18 +69,18 @@ class Graph extends Component {
 		        markerType: "square",
                 toolTipContent: "Day - {x}: {y}%",
                 dataPoints: [
-                    { x: new Date(2017, 2, 1), y: 9.3 },
-                    { x: new Date(2017, 2, 2), y: 6.2 },
-                    { x: new Date(2017, 2, 3), y: 6.8 },
-                    { x: new Date(2017, 2, 4), y: 4.5 },
-                    { x: new Date(2017, 2, 5), y: 5.9 },
-                    { x: new Date(2017, 2, 6), y: 4.2 },
-                    { x: new Date(2017, 2, 7), y: 4.0 },
-                    { x: new Date(2017, 2, 8), y: 3.4 },
-                    { x: new Date(2017, 2, 9), y: 3.5},
-                    { x: new Date(2017, 2, 10), y: 3.0},
-                    { x: new Date(2017, 2, 11), y: 3.3},
-                    { x: new Date(2017, 2, 12), y:3.0}
+                    { x: 0, y: 9.3 },
+                    { x: 1, y: 6.2 },
+                    { x: 2, y: 6.8 },
+                    { x: 3, y: 4.5 },
+                    { x: 4, y: 5.9 },
+                    { x: 5, y: 4.2 },
+                    { x: 6, y: 4.0 },
+                    { x: 7, y: 3.4 },
+                    { x: 8, y: 3.5},
+                    { x: 9, y: 3.0},
+                    { x: 10, y: 3.3},
+                    // { x: 1, y:3.0}
                     
                 ]
             }

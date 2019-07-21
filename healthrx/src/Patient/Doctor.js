@@ -36,7 +36,7 @@ class Patient extends Component {
 
     
             this.setState({
-                entries: dataset[0].entries,
+                // entries: dataset[0].entries,
               loading: false,
             });
           });
@@ -65,16 +65,8 @@ class Patient extends Component {
                         </Col>
                     </Row>
                     <Row>
-                        <Col xs={8} >
+                        <Col >
                             <Graph id="graph" entries={this.state.entries} date={this.state.date} />
-                        </Col>
-                        <Col>
-                            <h1 id="crisis-line"> Today's tRx Score </h1>
-                            <span id="score"> 10.5 </span>
-                            <br></br>
-                            <p id="crisis-line"> Crisis Line contacts:<br></br> 
-                            Call at: <a href="tel:18002738255">1-800-273-8255</a><br></br>
-                            Chat with a   <a href="https://suicidepreventionlifeline.org/chat/">rep</a>  </p>
                         </Col>
                     </Row>
 
