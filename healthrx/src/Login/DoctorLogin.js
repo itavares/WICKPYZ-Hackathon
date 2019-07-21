@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './Login.css'
 import {Form} from 'react-bootstrap'
 
+<<<<<<< HEAD
 import {  withFirebase } from '../Firebase';
 import * as ROUTES from '../constants/routes'
 import { withRouter } from 'react-router-dom';
@@ -81,10 +82,10 @@ class DoctorLogin extends Component {
     //   }
 
 
+=======
+class DoctorLogin extends Component {
+>>>>>>> parent of dd385d08... Merge branch 'master' of https://github.com/itavares/WICKPYZ-Hackathon
     render() {
-        const { email, password, error } = this.state;
-
-
         return (
             <div id="login"> 
 
@@ -93,38 +94,24 @@ class DoctorLogin extends Component {
                     <i class="fas fa-user-md"></i>
                 </div>
                 <h1>Sign in</h1> 
-                <form method="POST" onSubmit={this.onSubmit}>
+                <form method="POST">
                     <div class="form-group" id="input">
                         <i class="far fa-user"></i>
-                        <Form.Control type="text" name="email" placeholder="Enter username" onChange={this.onChange}  value={email} />
-                   
-
+                        <Form.Control type="text" name="user" placeholder="Enter username" />
+                        {/* <input type="text" class="form-control" id="user" name="user" placeholder="Enter username"><br>  */}
                     </div>
                     <div class="form-group" id="input">
                         <i class="fas fa-key"></i>
-                       
-
-                        <Form.Control type="password" name="password" placeholder="Enter password" onChange={this.onChange} value={password} />
-                        
-
+                        {/* <input type="password" class="form-control" id="password" name="password" placeholder="Enter password"> &nbsp; */}
+                        <Form.Control type="password" name="password" placeholder="Enter password" />
+                        {/* <i onmousedown="showpass()" onmouseup="hidepass()" id="showpass" class="far fa-eye"></i>   */}
                     </div>
-                    <button type="submit" class="btn btn" id="loginb">Login
-                    </button>
-
-                    {error && <p>{error.message}</p>}
-
+                    <button type="submit" class="btn btn" id="loginb">Login</button>
                 </form>
+
             </div>
         );
     }
 }
 
-const DoctorLoginForm = compose(
-    withRouter,
-    withFirebase,
-)(DoctorLogin);
-
-
-export default DoctorLoginPage;
-
-export {DoctorLoginForm};
+export default DoctorLogin;

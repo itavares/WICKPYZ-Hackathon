@@ -1,5 +1,6 @@
 import app from'firebase/app';
 import 'firebase/auth';
+<<<<<<< HEAD
 import 'firebase/database';
 import 'firebase/firestore';
 
@@ -7,6 +8,8 @@ import 'firebase/firestore';
 
 // const firebase = require('firebase');
 // require('firebase/firestore');
+=======
+>>>>>>> parent of dd385d08... Merge branch 'master' of https://github.com/itavares/WICKPYZ-Hackathon
 
 
 const firebaseConfig = {
@@ -19,14 +22,19 @@ const firebaseConfig = {
   appId: "1:883168315312:web:bb63bb763760ed6a"
 };
 
-//
+// 
 class Firebase {
   constructor() {
+<<<<<<< HEAD
     
     app.initializeApp(firebaseConfig);   
+=======
+    app.initializeApp(config);
+>>>>>>> parent of dd385d08... Merge branch 'master' of https://github.com/itavares/WICKPYZ-Hackathon
     
     this.fieldValue = app.firestore.FieldValue;
     this.auth = app.auth();
+<<<<<<< HEAD
     this.db = app.database();
 
     this.db = app.firestore();
@@ -39,7 +47,13 @@ class Firebase {
  
     // *** AUTH  API ***
 
+=======
+  }
 
+  // AUTH API -
+>>>>>>> parent of dd385d08... Merge branch 'master' of https://github.com/itavares/WICKPYZ-Hackathon
+
+  
   // API to create user
   doCreateUserWithEmailAndPassword = (email, password) =>
     this.auth.createUserWithEmailAndPassword(email, password);
@@ -50,6 +64,7 @@ class Firebase {
   //f no user is authenticated, nothing will happen when this function is called
   doSignOut = () => this.auth.signOut();
 
+<<<<<<< HEAD
 
     // *** User API ***
 
@@ -87,6 +102,13 @@ class Firebase {
     users = () => this.db.collection('users');
     
     
+=======
+
+  doPasswordReset = email => this.auth.sendPasswordResetEmail(email);
+
+  doPasswordUpdate = password =>
+    this.auth.currentUser.updatePassword(password);
+>>>>>>> parent of dd385d08... Merge branch 'master' of https://github.com/itavares/WICKPYZ-Hackathon
 }
 
 export default Firebase;

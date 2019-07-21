@@ -9,3 +9,4 @@ ${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/Material-Design-Iconic-Font.ttf
 ${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/octicons.ttf
 ${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/zocial-regular-webfont.ttf
 ${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/gRPC-C++/gRPCCertificates-Cpp.bundle

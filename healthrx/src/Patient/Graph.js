@@ -44,11 +44,9 @@ class Graph extends Component {
             },
             data: [{
                 type: "line",
-                showInLegend: true,
-                name: "Prozac",
-		        markerType: "square",
                 toolTipContent: "Day - {x}: {y}%",
                 dataPoints: [
+<<<<<<< HEAD
                     { x: 0, y: 7.5 },
                     { x: 1, y: 3.4 },
                     { x: 2, y: 6.8 },
@@ -84,12 +82,27 @@ class Graph extends Component {
                     
                 ]
             }
+=======
+                    { x: new Date(2017, 0, 1), y: 120 },
+                    { x: new Date(2017, 1, 1), y: 135 },
+                    { x: new Date(2017, 2, 1), y: 144 },
+                    { x: new Date(2017, 3, 1), y: 103 },
+                    { x: new Date(2017, 4, 1), y: 93 },
+                    { x: new Date(2017, 5, 1), y: 129 },
+                    { x: new Date(2017, 6, 1), y: 143 },
+                    { x: new Date(2017, 7, 1), y: 156 },
+                    { x: new Date(2017, 8, 1), y: 122 },
+                    { x: new Date(2017, 9, 1), y: 106 },
+                    { x: new Date(2017, 10, 1), y: 137 },
+                    { x: new Date(2017, 11, 1), y: 142 }
+>>>>>>> ec7b2a353aa773100c6afa332e96fd7042d74707
                 ]
+            }]
         }
         
         return (
         <div>
-            {/* <h1>Data from last 3</h1> */}
+            <h1>React Line Chart</h1>
             <CanvasJSChart options = {options} 
                 /* onRef={ref => this.chart = ref} */
             />

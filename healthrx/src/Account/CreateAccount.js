@@ -6,10 +6,8 @@ import {  withFirebase } from '../Firebase';
 import * as ROUTES from '../constants/routes'
 import { withRouter } from 'react-router-dom';
 
-
 import {compose} from 'recompose';
-import Firebase from '../Firebase/Firebase';
-import '../Firebase/Firebase.js';
+
 
 const CreatAccountPage = () =>(
     <div>
@@ -31,7 +29,6 @@ const CreatAccountPage = () =>(
   };
 
 class CreateAccount extends Component {
-
     constructor(props) {
         super(props);
         this.state = { ...INITIAL_STATE };
@@ -47,6 +44,7 @@ class CreateAccount extends Component {
 
     onSubmit = event => {
         const { email, passwordOne } = this.state;
+<<<<<<< HEAD
         let database = this.props.firebase.database;
         this.setState({
             username: this.state.email, 
@@ -68,6 +66,11 @@ class CreateAccount extends Component {
               })
 
 
+=======
+
+        this.props.firebase
+          .doCreateUserWithEmailAndPassword(email, passwordOne)
+>>>>>>> parent of dd385d08... Merge branch 'master' of https://github.com/itavares/WICKPYZ-Hackathon
           .then(authUser => {
             this.setState({ ...INITIAL_STATE });
             this.props.history.push(ROUTES.HOME); // REDIRECTS TO USERS HOME 
